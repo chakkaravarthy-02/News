@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/navigation"
+    app:startDestination="@id/newsOverviewFragment">
+
+    <fragment
+        android:id="@+id/newsOverviewFragment"
+        android:name="com.example.news.screens.overview.NewsOverviewFragment"
+        android:label="NewsOverviewFragment" >
+        <action
+            android:id="@+id/action_newsOverviewFragment_to_newsDetailFragment"
+            app:destination="@id/newsDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/newsDetailFragment"
+        android:name="com.example.news.screens.detail.WebViewFragment"
+        android:label="NewsDetailFragment" >
+        <action
+            android:id="@+id/action_newsDetailFragment_to_newsOverviewFragment"
+            app:destination="@id/newsOverviewFragment" />
+        <argument
+            android:name="webUrl"
+            app:argType="string" />
+    </fragment>
+</navigation>
