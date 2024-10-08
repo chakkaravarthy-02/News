@@ -45,7 +45,7 @@ class WeatherRepository {
                     location.longitude,
                     "minutely,hourly,daily,alerts",
                     "metric",
-                    ""
+                    ""//apikey
                 ).await()
             } catch (e: Exception) {
                 println("Weather api error $e")
