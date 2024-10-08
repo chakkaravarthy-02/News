@@ -21,7 +21,7 @@ private val retrofit = Retrofit.Builder()
     .build()
 
 interface NewsApiService {
-    @GET("top-headlines?country=us&apiKey=642a46cbef954858bc01c9d11d7e5dca")
+    @GET("top-headlines?country=us&apiKey=apikey")
     fun getNewsDetails(): Deferred<NewsItem>
 }
 
